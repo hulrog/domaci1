@@ -36,9 +36,7 @@ class Person{
 
         if($result){
             while($row=$result->fetch_array()){
-                //echo $row[0]; //id(first field) of the fetched record
                 $myArray[] = $row; //append the array, put the row to the end
-                //echo $myArray[0][0]; //first field of the first fetched record
             }
         }
 

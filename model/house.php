@@ -29,7 +29,8 @@ class House{
     }
 
    public static function add(House $house, mysqli $conn){
-    $seat = mysqli_real_escape_string($conn, $house->seat);//for the apostrophes King's Landing, Storm's End etc.
+    //for the apostrophes King's Landing, Storm's End etc.
+    $seat = mysqli_real_escape_string($conn, $house->seat);
 
     $sql = "INSERT INTO `houses` (`name`,`seat`,`region`) 
     VALUES('$house->name', '$seat', '$house->region')";
