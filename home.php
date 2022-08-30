@@ -57,6 +57,10 @@
         Create character. </button> </td>
         <td><a href="home.php"> <button class="fancyButton"> Refresh. </button></a> </td>
     </tr>
+    <tr>
+        <td><button class="fancyButton" onclick="sortTable()"> Sort by name. </button> </td>
+        <td><input type="text" id="search" onkeyup="search()" placeholder="Enter character name..."></td>
+    </tr>
 
 </table>
 
