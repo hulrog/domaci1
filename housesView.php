@@ -92,9 +92,17 @@
             <td> <?php echo $row['seat']; ?> </td>
             <td> <?php echo $row['region']; ?> </td>
             <td> 
-                <a class="editButton" href="handler/updateHouses.php?houseID=<?php echo $row['houseID']; ?>">Edit</a>
-                <a class="deleteButton" href="handler/deleteHouses.php?houseID=<?php echo $row['houseID']; ?>">X</a>
-                <a class="editButton" href="members.php?houseID=<?php echo $row['houseID']; ?>">Members</a>  
+                <div id="row-buttons"> 
+                    <a class="editButton" href="handler/updateHouses.php?houseID=<?php echo $row['houseID']; ?>">
+                        <img class="row-button" src="icons/edit.png" style="height:40px"></img>
+                    </a>
+                    <a class="deleteButton" href="handler/deleteHouses.php?houseID=<?php echo $row['houseID']; ?>">
+                        <img class="row-button" src="icons/delete.png" style="height:40px"></img> 
+                    </a>
+                    <a class="editButton" href="members.php?houseID=<?php echo $row['houseID']; ?>">
+                        <img class="row-button" src="icons/member.png" style="height:40px"></img>
+                    </a>
+                </div>
             </td>
         </tr>
 

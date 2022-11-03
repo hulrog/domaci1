@@ -1,16 +1,16 @@
 /* attach a submit handler to the form */
-$("#createCharForm").submit(function(event) {
+$("#createCharForm").submit(function (event) {
 
     // stop form from refreshing
     event.preventDefault();
-  
+
 
     var name = $("#name").val();
     var houseID = $("#houseID").val();
     var title = $("#title").val();
     var gender = $("#gender").val();
 
-    if(name==''||houseID==''||title==''||gender=='') {
+    if (name == '' || houseID == '' || title == '' || gender == '') {
         alert("Please fill all fields.");
         return false;
     }
@@ -25,14 +25,14 @@ $("#createCharForm").submit(function(event) {
             gender: gender
         },
         cache: false,
-        success: function(data) {
+        success: function (data) {
             alert(data);
         },
-        error: function(xhr, status, error) {
+        error: function (xhr, status, error) {
             console.error(xhr);
         }
     });
-  });
+});
 
 //for the sorting
 function sortTable() {
@@ -40,7 +40,7 @@ function sortTable() {
     var name1, name2;
     var i;
     table = document.getElementById("charactersTable");
-    
+
     switchFlag = true;
     while (switchFlag) {
         switchFlag = false;//reset the switch at
@@ -53,8 +53,8 @@ function sortTable() {
             name2 = rows[i + 1].getElementsByTagName("td")[1];
             //if the names should switch
             if (name1.innerHTML.toLowerCase() > name2.innerHTML.toLowerCase()) {
-            switchable = true;
-            break;
+                switchable = true;
+                break;
             }
         }
         if (switchable) {
@@ -65,19 +65,19 @@ function sortTable() {
     }
 
     evenOddColors();
-}  
+}
 
-function evenOddColors(){
+function evenOddColors() {
     var colorIterator;
     table = document.getElementById("charactersTable");
     rows = table.rows;
 
 
     //rows[colorIterator].style.display != "none"
-    for(colorIterator=1; colorIterator < rows.length; colorIterator++) {
-        if(colorIterator%2==0){
+    for (colorIterator = 1; colorIterator < rows.length; colorIterator++) {
+        if (colorIterator % 2 == 0) {
             rows[colorIterator].style.backgroundColor = "#debc89";
-        }else{
+        } else {
             rows[colorIterator].style.backgroundColor = "#efdabd";
         }
     }
@@ -87,7 +87,7 @@ function evenOddColors(){
 
 //filtering 
 function search() {
-  
+
     searchValue = document.getElementById("search");
     filter = searchValue.value.toLowerCase(); //because the names contain both upper and lower case letters
 
@@ -96,11 +96,11 @@ function search() {
 
     var characterName, i, txtValue;
     var i;
-    
+
     for (i = 1; i < rows.length; i++) {
         characterName = rows[i].getElementsByTagName("td")[1];//1 is the index of the name column
         txtValue = characterName.innerText;
-        
+
         if (txtValue.toLowerCase().indexOf(filter) > -1) { //ako mogu ta slova da se nadju u nizu
             rows[i].style.display = ""; //pokazi one koji matchuju 
         } else {
@@ -112,18 +112,18 @@ function search() {
     var displayedIterator;
     var colorIterator = 1;
     var displayedRow;
-    for(displayedIterator=1; displayedIterator < rows.length; displayedIterator++) {
-        if(rows[displayedIterator].style.display != "none"){
+    for (displayedIterator = 1; displayedIterator < rows.length; displayedIterator++) {
+        if (rows[displayedIterator].style.display != "none") {
             displayedRow = rows[displayedIterator];
-            if(colorIterator%2 == 0){
+            if (colorIterator % 2 == 0) {
                 displayedRow.style.backgroundColor = "#debc89";
-            }else{
+            } else {
                 displayedRow.style.backgroundColor = "#efdabd";
             }
             colorIterator++;
         }
     }
-    
+
 }
 
 
@@ -134,7 +134,7 @@ function canonNames(str) {
         return;
     } else {
         var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
+        xmlhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) { //4 znaci complete , 200 ok
                 document.getElementById("suggestedName").innerHTML = this.responseText;
             }
@@ -142,4 +142,10 @@ function canonNames(str) {
         xmlhttp.open("GET", "handler/names.php?enteredName=" + str, true);
         xmlhttp.send();
     }
+}
+
+// Clear the search bar
+function clearSearch() {
+    document.getElementById("search").value = "";
+    search(); //To refresh the view
 }

@@ -1,61 +1,64 @@
-body{
+body {
     background-color: #778586;
     /* apollo blue #778586  tapestry gold #af8843 #   grey background #778586*/
     color: black;
-    display: flex; 
+    display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 140%;
     transition-duration: 1000ms;
-       
+
 }
-.targaryen-colors{
+
+.targaryen-colors {
     background-color: black;
     color: red;
 }
 
-h1{
+h1 {
     font-style: italic;
 }
 
-.table{
+.table {
     border-collapse: collapse;
     width: 60%;
-    
+
 }
-thead{
+
+thead {
     border: 5px solid #af8843;
     background-color: #deb06c;
     color: #494953;
-    
+
 }
 
-th, td{
+th,
+td {
     padding: 10px;
     text-align: left;
 }
 
-.evenRow{
+.evenRow {
     border: 5px solid #af8843;
     background-color: #efdabd;
     color: #494953;
     text-align: left;
 }
 
-.oddRow{
+.oddRow {
     border: 5px solid #af8843;
     background-color: #debc89;
-    color: #494953;   
+    color: #494953;
 }
 
-.menu_buttons{
+.menu_buttons {
     width: 50%;
     table-layout: fixed;
     border-collapse: collapse;
 
 }
 
-.fancyButton{
+.fancyButton {
     background-color: #af8843;
     border-radius: 8px;
     border: none;
@@ -67,37 +70,46 @@ th, td{
     transition-duration: 200ms;
     width: 100%;
     height: 100%;
-    
+
 }
-.fancyButton:hover{
+
+.fancyButton:hover {
     background-color: #e4a432;
     color: black;
     transition-duration: 200ms;
 
 }
-.menu_buttons input{
+
+.menu_buttons input {
     font-size: 100%;
     width: 200%;
     border: none;
     border-radius: 20px;
     padding-inline-start: 20px;
-    accent-color: #e4a432; 
+    accent-color: #e4a432;
 }
 
-.editButton{
-    background-color: #778586;
+#row-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.editButton {
+    background-color: #e4a432;
     border-radius: 5px;
     padding: 5px;
     color: white;
     text-decoration: none;
     transition-duration: 300ms;
 }
-.editButton:hover{
-    background-color: #434c4d;
+
+.editButton:hover {
+    background-color: #a77826;
     transition-duration: 300ms;
 }
 
-.deleteButton{
+.deleteButton {
     background-color: #FF0000;
     border-radius: 5px;
     padding: 5px;
@@ -106,14 +118,15 @@ th, td{
     transition-duration: 300ms;
 
 }
-.deleteButton:hover{
+
+.deleteButton:hover {
     background-color: #c20000;
     transition-duration: 300ms;
 }
 
-#createCharForm{
+#createCharForm {
     background-color: #af8843;
-    width:60%;
+    width: 60%;
     padding-bottom: 0%;
     font-size: 100%;
     display: flex;
@@ -121,61 +134,65 @@ th, td{
     align-items: center;
 }
 
-#createCharForm>button{
+#createCharForm>button {
     font-size: 100%;
     margin: 3%;
     padding: 1%;
-    width: 40%; 
+    width: 40%;
     border: none;
     background-color: #debc89;
     transition-duration: 200ms;
     cursor: pointer;
     border-radius: 20px;
-    
+
 }
-#createCharForm>button:hover{
+
+#createCharForm>button:hover {
     background-color: #efdabd;
     transition-duration: 200ms;
 }
 
 
-#fullname>input{
+#fullname>input {
     font-size: 100%;
     background-color: #efdabd;
     border: none;
     width: 25%;
     padding: 1%;
     accent-color: #e4a432;
-    
+
 }
-#fullname>select{
+
+#fullname>select {
     font-size: 90%;
     background-color: #efdabd;
     border: none;
     margin-bottom: 5%;
     width: 25%;
-    padding: 1%;        
+    padding: 1%;
 }
 
-#fullname>label{
-    width:25%;
+#fullname>label {
+    width: 25%;
     margin: 2%;
 }
 
-#additionalInfo{
+#additionalInfo {
     display: inline-flex;
 }
 
-#title-label-box{
+#title-label-box {
     width: 50%;
     display: inline-flex;
 }
-#title-label-box>label{
-    width:25%;
+
+#title-label-box>label {
+    width: 25%;
     margin: 2%;
-    
+
 }
-#title-label-box>input{
+
+#title-label-box>input {
     font-size: 100%;
     background-color: #efdabd;
     border: none;
@@ -185,33 +202,63 @@ th, td{
 }
 
 
-#gender-rb{
+#gender-rb {
     width: 50%;
     display: inline-flex;
     align-items: center;
 }
 
-#gender-rb>label{
-    width:25%;
+#gender-rb>label {
+    width: 25%;
     margin: 2%;
 }
-#gender-rb>input{
+
+#gender-rb>input {
     font-size: 100%;
     width: 100%;
     accent-color: #e4a432;
 }
 
-#nameAndSigil{
+#nameAndSigil {
     height: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 60%;
-    margin-bottom:0.5%;
+    margin-bottom: 0.5%;
 }
 
-#nameAndSigil>img{
+#nameAndSigil>img {
     height: 15%;
     width: 15%;
-    
+
+}
+
+#search-div {
+    display: flex;
+    flex-direction: row;
+    width: 200%;
+}
+
+#search-field {
+    border: none;
+    border-radius: 100px;
+}
+
+#search-img {
+    width: 20%;
+    height: 20%;
+    margin-left: -20%;
+    opacity: 0.5;
+}
+
+#clear-img {
+    width: 20%;
+    height: 20%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+#clear-img:hover {
+    opacity: 1;
 }

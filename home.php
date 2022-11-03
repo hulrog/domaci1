@@ -59,7 +59,13 @@
     </tr>
     <tr>
         <td><button class="fancyButton" onclick="sortTable()"> Sort by name. </button> </td>
-        <td><input type="text" id="search" onkeyup="search()" placeholder="Enter character name..."></td>
+        <td>
+            <div id = search-div>
+                <input type="text" id="search" onkeyup="search()" placeholder="Enter character name... ">
+                <img id="search-img" src="icons/search.png"></img>
+                <img id="clear-img" src="icons/delete.png" onclick="clearSearch()"></img>
+            <div>
+        </td>
     </tr>
 
 </table>
@@ -101,8 +107,14 @@
             <td> <?php echo $row['ptitle']; ?> </td>
             <td> <?php echo $row['pgender']; ?> </td>
             <td> 
-                <a class="editButton" href="handler/update.php?id=<?php echo $row['ppersonID']; ?>">Edit</a>
-                <a class="deleteButton" href="handler/delete.php?id=<?php echo $row['ppersonID']; ?>">X</a>
+                <div id="row-buttons"> 
+                    <a class="editButton" href="handler/update.php?id=<?php echo $row['ppersonID']; ?>">
+                        <img class="row-button" src="icons/edit.png" style="height:40px"></img>
+                    </a>
+                    <a class="deleteButton" href="handler/delete.php?id=<?php echo $row['ppersonID']; ?>">
+                        <img class="row-button" src="icons/delete.png" style="height:40px"></img> 
+                    </a>
+                </div>
             </td>
         </tr>
 

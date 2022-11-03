@@ -1,61 +1,64 @@
-body{
+body {
     background-color: #778586;
     /* apollo blue #778586  tapestry gold #af8843 #   grey background #778586*/
     color: black;
-    display: flex; 
+    display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 140%;
     transition-duration: 1000ms;
-       
+
 }
-.targaryen-colors{
+
+.targaryen-colors {
     background-color: black;
     color: red;
 }
 
-h1{
+h1 {
     font-style: italic;
 }
 
-.table{
+.table {
     border-collapse: collapse;
     width: 60%;
-    
-    
+
+
 }
-thead{
+
+thead {
     border: 5px solid #af8843;
     background-color: #deb06c;
     color: #494953;
 }
 
-th, td{
+th,
+td {
     padding: 10px;
     text-align: left;
 }
 
-.evenRow{
+.evenRow {
     border: 5px solid #af8843;
     background-color: #efdabd;
     color: #494953;
     text-align: left;
 }
 
-.oddRow{
+.oddRow {
     border: 5px solid #af8843;
     background-color: #debc89;
-    color: #494953;   
+    color: #494953;
 }
 
-.menu_buttons{
+.menu_buttons {
     width: 50%;
     table-layout: fixed;
     border-collapse: collapse;
 
 }
 
-.fancyButton{
+.fancyButton {
     background-color: #af8843;
     border-radius: 8px;
     border: none;
@@ -67,30 +70,37 @@ th, td{
     transition-duration: 200ms;
     width: 100%;
     height: 100%;
-    
+
 }
 
-.fancyButton:hover{
+.fancyButton:hover {
     background-color: #e4a432;
     color: black;
     transition-duration: 200ms;
 
 }
 
-.editButton{
-    background-color: #778586;
+#row-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.editButton {
+    background-color: #e4a432;
     border-radius: 5px;
     padding: 5px;
     color: white;
     text-decoration: none;
     transition-duration: 300ms;
 }
-.editButton:hover{
-    background-color: #434c4d;
+
+.editButton:hover {
+    background-color: #a77826;
     transition-duration: 300ms;
 }
 
-.deleteButton{
+.deleteButton {
     background-color: #FF0000;
     border-radius: 5px;
     padding: 5px;
@@ -98,14 +108,15 @@ th, td{
     text-decoration: none;
     transition-duration: 300ms;
 }
-.deleteButton:hover{
+
+.deleteButton:hover {
     background-color: #c20000;
     transition-duration: 300ms;
 }
 
-#createHouseForm{
+#createHouseForm {
     background-color: #af8843;
-    width:60%;
+    width: 60%;
     padding-bottom: 2%;
     font-size: 100%;
     display: flex;
@@ -113,61 +124,65 @@ th, td{
     align-items: center;
 }
 
-#createHouseForm>button{
+#createHouseForm>button {
     font-size: 100%;
     margin: 3%;
     padding: 1%;
-    width: 40%; 
+    width: 40%;
     border: none;
     background-color: #debc89;
     transition-duration: 200ms;
     cursor: pointer;
     border-radius: 20px;
-    
+
 }
-#createHouseForm>button:hover{
+
+#createHouseForm>button:hover {
     background-color: #efdabd;
     transition-duration: 200ms;
 }
 
 
-#name-region>input{
+#name-region>input {
     font-size: 100%;
     background-color: #efdabd;
     border: none;
     width: 25%;
     padding: 1%;
     accent-color: #e4a432;
-    
+
 }
-#name-region>select{
+
+#name-region>select {
     font-size: 90%;
     background-color: #efdabd;
     border: none;
     margin-bottom: 5%;
     width: 30%;
-    padding: 1%;        
+    padding: 1%;
 }
 
-#name-region>label{
-    width:25%;
+#name-region>label {
+    width: 25%;
     margin: 2%;
 }
 
-#seat-label-box{
+#seat-label-box {
     display: inline-flex;
 }
 
-#seat-label-boxbox{
+#seat-label-boxbox {
     width: 50%;
     display: inline-flex;
 }
-#seat-label-box>label{
-    width:25%;
+
+#seat-label-box>label {
+    width: 25%;
     margin: 2%;
-    
+
 }
-#seat-label-box>input{
+
+#seat-label-box>input {
     font-size: 100%;
     background-color: #efdabd;
     border: none;
@@ -175,4 +190,3 @@ th, td{
     padding: 1%;
     accent-color: #e4a432;
 }
-
