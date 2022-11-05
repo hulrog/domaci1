@@ -156,8 +156,12 @@
         <input type="text" name="seat" autocomplete="off"/>
     </div>
     <button id="btn-add" type="submit">CREATE</button>
-</form>
 
+    <div id="attribution">   
+        <p> Petar Tomić, Fakultet Organizacionih Nauka. Icons by: <a href="https://icons8.com">Icons8</a> </p>
+    </div>
+
+</form>
 
 
 </body>

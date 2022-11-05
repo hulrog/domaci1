@@ -179,6 +179,9 @@
     <button id="btn-add" type="submit">CREATE</button>
 
     <p>Canon names: <span id="suggestedName"></span></p>
+    <div id="attribution">   
+        <p> Petar Tomic, Fakultet Organizacionih Nauka. Icons by: <a href="https://icons8.com">Icons8</a> </p>
+    </div>
 </form>
 
 

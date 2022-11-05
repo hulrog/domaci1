@@ -263,3 +263,17 @@ td {
 #clear-img:hover {
     opacity: 1;
 }
+
+#attribution {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: #efdabd;
+    padding: 5px;
+}
+
+#attribution a {
+    color: black;
+}
