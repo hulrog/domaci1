@@ -49,7 +49,7 @@
 <h1>A Song of Ice and Fire</h1>
 <h2>Houses</h2> 
 
-<table class=menu_buttons>
+<table class= "menu_buttons">
     <tr>
         <td><a href="home.php"> <button class="fancyButton"> View characters. </button></a> </td>
         <td><button class="fancyButton" onClick="document.getElementById('createHouseForm').scrollIntoView();"> Create house. </button> </td>
@@ -57,7 +57,21 @@
     </tr>
 </table>
 
-<table class = "table">
+<h3> Filter by region: </h3>
+
+<div id="region-div">
+    <img class="region-img" src="sigils/1.svg" onclick="displayRegion(1)">
+    <img class="region-img" src="sigils/2.svg" onclick="displayRegion(2)">
+    <img class="region-img" src="sigils/3.svg" onclick="displayRegion(3)">
+    <img class="region-img" src="sigils/4.svg" onclick="displayRegion(4)">
+    <img class="region-img" src="sigils/5.svg" onclick="displayRegion(5)">
+    <img class="region-img" src="sigils/6.svg" onclick="displayRegion(6)">
+    <img class="region-img" src="sigils/7.svg" onclick="displayRegion(7)">
+    <img class="region-img" src="sigils/8.svg" onclick="displayRegion(8)">
+    <img class="region-img" src="sigils/9.svg" onclick="displayRegion(9)">
+</div>
+
+<table class = "table" id="houses-table">
     <thead>
         <tr>
             <th>ID</th>
@@ -77,7 +91,7 @@
 
     ?>
         <?php
-            if($iterator % 2 ==0 ){
+            if($iterator % 2 == 0){
         ?>
         <tr class="evenRow">
         <?php 

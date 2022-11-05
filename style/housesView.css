@@ -190,3 +190,24 @@ td {
     padding: 1%;
     accent-color: #e4a432;
 }
+
+#region-div {
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+    /* margin-bottom: 5%; */
+}
+
+.region-img {
+    height: 4em;
+    width: 4em;
+    cursor: pointer;
+    transition-duration: 200ms;
+    opacity: 0.7;
+    margin-bottom: 1%;
+}
+
+.region-img:hover {
+    opacity: 1;
+    filter: drop-shadow(0px 0px 10px #e4a432);
+}

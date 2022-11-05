@@ -112,7 +112,7 @@
                         <img class="row-button" src="icons/edit.png" style="height:40px"></img>
                     </a>
                     <a class="deleteButton" href="handler/delete.php?id=<?php echo $row['ppersonID']; ?>">
-                        <img class="row-button" src="icons/delete.png" style="height:40px"></img> 
+                        <img class="row-button" src="icons/kill.png" style="height:40px"></img> 
                     </a>
                 </div>
             </td>
