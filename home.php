@@ -79,7 +79,7 @@
             <th>Title</th>
             <th>Gender</th>
             <th>Options</th>
-            
+            <th>Sigil</th>
         </tr>   
     </thead>
     <tbody>
@@ -115,6 +115,9 @@
                         <img class="row-button" src="icons/kill.png" style="height:40px"></img> 
                     </a>
                 </div>
+            </td>
+            <td>
+                <img class="sigil-img" src="sigils/<?php echo $row['hhouseID']; ?>.svg" alt="Not Found" onerror='this.src="sigils/0.svg"'> 
             </td>
         </tr>
 

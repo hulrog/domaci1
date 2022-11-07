@@ -277,3 +277,8 @@ td {
 #attribution a {
     color: black;
 }
+
+.sigil-img {
+    width: 3em;
+    height: 3em;
+}

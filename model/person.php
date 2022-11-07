@@ -20,7 +20,7 @@ class Person{
 
         //$sql = "SELECT * FROM `persons`";
         //we want the full result, including the name of the house not just the id, need data from both tables
-        $sql = "SELECT p.personID as ppersonID, p.name as pname, h.name as hname, p.title as ptitle, p.gender as pgender 
+        $sql = "SELECT p.personID as ppersonID, p.name as pname, h.name as hname, p.title as ptitle, p.gender as pgender, h.houseID as hhouseID 
         FROM persons as p INNER JOIN houses as h
         ON p.house = h.houseID
         ORDER BY ppersonID";        

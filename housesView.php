@@ -79,7 +79,7 @@
             <th>Seat</th>
             <th>Region</th>
             <th>Options</th>
-            
+            <th>Sigil</th>
         </tr>
     </thead>
     <tbody>
@@ -117,6 +117,9 @@
                         <img class="row-button" src="icons/member.png" style="height:40px"></img>
                     </a>
                 </div>
+            </td>
+            <td>
+                <img class="sigil-img" src="sigils/<?php echo $row['houseID']; ?>.svg" alt="Not Found" onerror='this.src="sigils/0.svg"'> 
             </td>
         </tr>
 
