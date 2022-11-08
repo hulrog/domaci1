@@ -19,6 +19,10 @@ h1 {
     font-style: italic;
 }
 
+#region-filter-div {
+    margin: 10px;
+}
+
 .table {
     border-collapse: collapse;
     width: 60%;
@@ -191,8 +195,15 @@ td {
     accent-color: #e4a432;
 }
 
+#region-checkbox {
+    accent-color: #e4a432;
+    height: 1.5em;
+    width: 1.5em;
+    cursor: pointer;
+}
+
 #region-div {
-    display: flex;
+    display: none;
     justify-content: space-evenly;
     width: 60%;
     /* margin-bottom: 5%; */

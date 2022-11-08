@@ -46,6 +46,22 @@ if(isset($_GET['houseID'])){
         (That house has <?php echo $resultMembers->num_rows ?> 
         <?php if($resultMembers->num_rows>1) echo 'members'; else echo 'member'; ?>)
     </p>
+    <p>
+        <?php 
+        $numberOfRows = $resultMembers->num_rows;
+        $iterator = 1;
+        while($row = $resultMembers->fetch_assoc()){
+            echo $row["name"];
+            if($iterator == $numberOfRows-1){
+                echo " and ";
+            }elseif($iterator < $numberOfRows){
+                echo ", ";
+            }
+            
+            $iterator++;
+        }
+        ?>
+    </p>
     <a href="../housesView.php"> <button class="fancyButton"> Back to houses. </button></a> 
 </head>
 <body>

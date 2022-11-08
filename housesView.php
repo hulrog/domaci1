@@ -57,7 +57,11 @@
     </tr>
 </table>
 
-<h3> Filter by region: </h3>
+<div id="region-filter-div">
+<input type="checkbox" name="region-checkbox" id="region-checkbox" onclick="regionFilter()"> 
+<span> Filter by region: </span>
+<span id="region-name">All Regions</span>
+</div>
 
 <div id="region-div">
     <img class="region-img" src="sigils/1.svg" onclick="displayRegion(1)">
@@ -74,7 +78,7 @@
 <table class = "table" id="houses-table">
     <thead>
         <tr>
-            <th>ID</th>
+            <th style="display:none">ID</th>
             <th>Name</th>
             <th>Seat</th>
             <th>Region</th>
@@ -101,7 +105,7 @@
         <?php
             }
         ?>
-            <td> <?php echo $row['houseID']; ?> </td>
+            <td style="display:none"> <?php echo $row['houseID']; ?> </td>
             <td> <?php echo $row['name']; ?> </td>
             <td> <?php echo $row['seat']; ?> </td>
             <td> <?php echo $row['region']; ?> </td>

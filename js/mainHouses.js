@@ -32,6 +32,19 @@ $("#createHouseForm").submit(function (event) {
     });
 });
 
+// Checkbox za region
+function regionFilter() {
+    var checked = document.getElementById("region-checkbox").checked;
+    var regionDiv = document.getElementById("region-div");
+    if (checked == true) {
+        regionDiv.style.display = "flex";
+    } else {
+        regionDiv.style.display = "none";
+        displayRegion(0); // All regions - pada u default dole
+    }
+
+}
+
 // Ne postoji regionID ali kao da postoji
 //isti brojevi kao prvih 9 sigil.svg
 function displayRegion(regionID) {
@@ -56,8 +69,11 @@ function displayRegion(regionID) {
             break;
         case 9: region = "Dorne";
             break;
-        default: "Other";
+        default: region = "All Regions";
     }
+
+    var regionName = document.getElementById("region-name");
+    regionName.innerHTML = region;
 
     var housesTable = document.getElementById("houses-table");
     var rows = housesTable.rows;
@@ -70,7 +86,7 @@ function displayRegion(regionID) {
         currentRowRegion = currentRow.getElementsByTagName("td")[3].innerHTML.trim();
 
         // 0 is id , 1 is name , 2 is seat, 3 is region
-        if (currentRowRegion == region) {
+        if (currentRowRegion == region || region == "All Regions") {
             currentRow.style.display = "";
             if (colorIterator % 2 == 0) {
                 currentRow.style.backgroundColor = "#debc89";
@@ -83,6 +99,5 @@ function displayRegion(regionID) {
         }
 
     }
-
 
 }

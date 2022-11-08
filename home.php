@@ -73,7 +73,7 @@
 <table class = "table" id="charactersTable">
     <thead>
         <tr>
-            <th>ID</th>
+            <th style="display:none">ID</th>
             <th>Name</th>
             <th>House</th>
             <th>Title</th>
@@ -101,7 +101,7 @@
         <?php
             }
         ?>
-            <td> <?php echo $row['ppersonID']; ?> </td>
+            <td style="display:none"> <?php echo $row['ppersonID']; ?> </td>
             <td> <?php echo $row['pname']; ?> </td>
             <td> <?php echo $row['hname']; ?> </td>
             <td> <?php echo $row['ptitle']; ?> </td>
