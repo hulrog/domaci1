@@ -43,9 +43,9 @@ function sortTable() {
 
     switchFlag = true;
     while (switchFlag) {
-        switchFlag = false;//reset the switch at
-        rows = table.rows;//array of rows
-        //i=1 because i=0 is the header
+        switchFlag = false; 
+        rows = table.rows;
+        //i=1 je prvi red a 0 je header
         for (i = 1; i < (rows.length - 1); i++) {
             switchable = false;
 
