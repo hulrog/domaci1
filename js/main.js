@@ -144,8 +144,3 @@ function canonNames(str) {
     }
 }
 
-// Clear the search bar
-function clearSearch() {
-    document.getElementById("search").value = "";
-    search(); //To refresh the view
-}

@@ -63,7 +63,6 @@
             <div id = search-div>
                 <input type="text" id="search" onkeyup="search()" placeholder="Enter character name... ">
                 <img id="search-img" src="icons/search.png"></img>
-                <img id="clear-img" src="icons/delete.png" onclick="clearSearch()"></img>
             <div>
         </td>
     </tr>
